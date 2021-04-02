@@ -18,14 +18,14 @@ int main()
     }
 
     imshow("Original Image", image);
+    
+    // Histogram:
+    show_histogram(image, "Histogram: Original Image");
 
-    show_histogram(image);
+    // Image Equalization:
+    equilize_gbr_image(image);
+    waitKey();
 
-
-    //bilateralFilter(image, bilateral_f_image, -1, 10, 1, BORDER_DEFAULT);
-    //imshow("Filtered Image: Bilateral Filter", bilateral_f_image);
-
-    //waitKey();
 
     return 0;
 }
